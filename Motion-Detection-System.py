@@ -1,4 +1,4 @@
-### MOVING OBJECT DETECTION
+### MOTION DETECTION SYSTEM
 
 import cv2 # open CV / To read the image/video
 
@@ -14,7 +14,7 @@ while True:
     
     _,image = camera.read() #read from camera
     
-    text = "Normal" # To show text in the output window if Moving object is Detected
+    text = "Normal" # To show text in the output window if Motion is Not Detected
 
     image = imutils.resize(image, width=1000) # resize
     
@@ -45,7 +45,7 @@ while True:
 
         cv2.rectangle(image,(x,y),(x+w,y+h),(0,255,0),2) # Syntax : cv2.rectangle(sourcename, starting_value, ending_value, colour, thickness)
 
-        text="Moving Object Detected"
+        text="Motion Detected" # To show text in the output window if Motion is Detected
 
     print(text) 
 
